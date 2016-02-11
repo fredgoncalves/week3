@@ -1,0 +1,50 @@
+//first sketch//
+1
+I expected the code to draw crosses across the whole canvas. 
+It only drew a part of it. 
+The for loop variable is conditioned to be <width/20.
+Make it conditioned to be <width.
+
+2
+I expected the code to draw regular size crosses all over the canvas, based on it's width and height.
+It drew really small crosses, looking like points.
+The variables created to draw the cross lines are too small (place = width/20 and line = place/4)
+Change it to place= width/10
+
+3
+I expected the code to draw the lines of the crosses based on the canvas height and width.
+The value of the variables were not following the width and height of the canvas.
+The variables were created outside the draw() function, so they were taking the value of the default canvas (100,100).
+Create the variables inside the draw() function.
+
+//third sketch//
+1
+I expected the code to draw white squares on top of the black squares randomly.
+It drew white squares randomly in the canvas, not on top of the black squares.
+The random number I'm using to place them is a float, not a integer.
+Convert the random float to a integer using the int() function.
+
+2
+I expeccted to draw several white squares on top of the black ones.
+It only drew one white square.
+The coordinate is not ranging, the random number is the same all the time.
+create the random number inside the for function so it will choose different numbers everytime it runs.
+
+3
+I expected to draw random white squares on top of the black ones.
+It drew white squares in the diagonal of the grid.
+The random value is the same for the x and y coordinates.
+Create a new random variable to the y coordinate
+
+4
+Expected to distribute the white squares randomly but equally over the canvas.
+It is taking much more out of the top lines than the bottom.
+Because of the order things are drawn, the black squares were being drawn on top of the white ones, following the order of lines.
+Take out the white squares out of the for() function that is drawing the black ones.
+
+//fourth sketch//
+1
+Expected to draw random white crosses on top of the black ones in each frame.
+It draws one frame correctly and then the rest is blank.
+The white stroke remains as the default.
+Set the stroke to black when drawing the black crosses.
